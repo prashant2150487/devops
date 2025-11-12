@@ -31,12 +31,12 @@ jobs:
     - name: Build project
       run: npm run build
     - name: upload build artifacts
-      run: npm run upload-artifacts@v4
+      run: actions/upload-artifacts@v4
       with:
         name: build-${{ matrix.node-version }}
         path: dist/
         retention-days: 7
-        
+
 
 
 
