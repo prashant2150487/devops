@@ -1,0 +1,21 @@
+FROM node:22-alpine
+
+# ENV CI=true
+# ENV PORT=3000
+
+
+WORKDIR /app
+COPY package*.json .
+COPY package-lock.json .
+RUN npm install
+COPY . .
+
+EXPOSE 5173 
+
+CMD [ "npm", "run" , "dev"]
+
+
+
+
+
+
