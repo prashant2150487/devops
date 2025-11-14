@@ -1,0 +1,11 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - "./:/app"          # Bind local folder
+      - /app/node_modules  # Prevent override
+    command: ["npm", "run", "dev", "--", "--host"]
