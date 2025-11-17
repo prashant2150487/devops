@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+      - dev
   pull_request:
     branches:
       - main
+      - dev
 
 jobs:
   build:
@@ -50,10 +52,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Configure Aws credentials
-        uses: aws-actions/configure-aws-credentials@v4
+      # - name: Configure Aws credentials
+      #   uses: aws-actions/configure-aws-credentials@v4
 
-        
+
 
 
 
